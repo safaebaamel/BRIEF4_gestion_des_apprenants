@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    overflow-x: hidden;
+}
+
+header {
+    /* padding: 15px 5%; */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #46b7e012;
+    .header-content {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+        overflow-y: hidden;
+    }
+}

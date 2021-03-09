@@ -29,7 +29,7 @@
                 <li class="nav_links"><a href="Notre_Gallery.html">Notre Gallery</a></li>
                 <li class="nav_links"><a href="Notre_Ecole.html">Notre Ecole</a></li>
                 <li class="nav_links"><a href="Contactez_Nous.html">Contactez Nous</a></li>
-                <li class="nav_links"><a href="Se_connecter.html">Se connecter</a></li>
+                <li class="nav_links li_btn"><a href="Se_connecter.html">Se connecter</a></li>
                 <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
@@ -38,15 +38,21 @@
     <!-- main -->
     <!-- end main -->
 
-    <main class="form-login">
+    <main class="login">
         <h1 class="big-title">Sign in to your</h1>
         <h2 class="sous-title">Justinmind Account</h2>
-        <form action="" class="form-login">
-            <label for="#email" class="label-name"></label>
-            <input type="email" placeholder="e.g.jack@scholariz.com" id="email">
+        <form action="" class="form-login shadow">
+            <label for="#email" class="label-name">your email</label>
+            <div class="email">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email">
+            </div>
+            <label for="#password" class="label-name">your password</label>
+            <div class="password">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input class="input" type="password" placeholder="your password here" id="password">
+            </div>
 
-            <label for="#password" class="label-name"></label>
-            <input type="password" placeholder="your password here" id="password">
             <a href="#">Forget password ?</a>
             <button onclick="">Sign in</button>
         </form>

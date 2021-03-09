@@ -133,6 +133,10 @@
             bottom: 2%;
         }
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:styles/style.scss
+>>>>>>> f30237273b56be854adf84bbfb32cf8850fbbe53
         @media all and (max-width:1300px) {
             .notre-ecole {
                 display: flex;
@@ -150,6 +154,15 @@
             }
         }
         
+<<<<<<< HEAD
+=======
+        .shadow {
+            -moz-box-shadow: inset 0 0 10px #000000;
+            -webkit-box-shadow: inset 0 0 10px #000000;
+            box-shadow: inset 0 0 10px #000000;
+        }
+        
+>>>>>>> f30237273b56be854adf84bbfb32cf8850fbbe53
         .form-login {
             background-color: #FFF;
             border: 1px solid;
@@ -209,4 +222,45 @@
                 left: 32px;
                 top: -11px;
             }
+<<<<<<< HEAD
         }
+=======
+        }
+        
+        .background-cover {
+            background-image: url("../pics/parents.PNG");
+            height: 500px;
+        }
+=======
+        // @media all and (max-width:700px) {
+        //     .notre-ecole {
+        //         display: flex;
+        //         flex-wrap: wrap;
+        //     }
+        //     .notre-ecole .description {
+        //         margin: 0;
+        //         margin-bottom: 20px;
+        //         width: 100%;
+        //     }
+        //     .image {
+        //         width: fit-content;
+        //         margin: 0 auto;
+        //         margin-top: 20px;
+        //     }
+        // }
+        
+        // .form-login {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     margin: auto;
+        //     width: fit-content;
+        //     // background-color: #46B6E0;
+        //     .big-title {
+        //         font-weight: 800px;
+        //         font-size: 50px;
+        //     }
+        // }
+>>>>>>> 9182122bfd84a88a2efc88cff28644193d8c3818:Page Web/styles/style.scss
+>>>>>>> f30237273b56be854adf84bbfb32cf8850fbbe53

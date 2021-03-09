@@ -8,6 +8,7 @@ nav {
         align-items: center;
         align-content: center;
         li {
+            cursor: pointer;
             padding: 15px 0;
             &:hover {
                 color: #FFF;
@@ -18,7 +19,14 @@ nav {
                 border-radius: 20px;
                 width: fit-content;
                 color: #FFF;
-                a:hover {
+                transition: background-color .35s ease-in-out;
+                &::after {
+                    all: unset !important;
+                }
+                &:hover {
+                    background-color: darken(#46B6E0, 25%);
+                }
+                &:hover a {
                     color: #FFF;
                 }
             }

@@ -91,44 +91,44 @@ nav {
     }
 }
 
-// @media all and (max-width:900px) {
-//     nav {
-//         padding: 5px 30px;
-//         ul {
-//             justify-content: center;
-//             align-items: center;
-//         }
-//         ul li {
-//             &.nav_links {
-//                 width: 100%;
-//                 display: none;
-//                 left: -2%;
-//                 &.show {
-//                     display: block;
-//                 }
-//             }
-//             &.btn {
-//                 display: block;
-//             }
-//             &:nth-child(6) {
-//                 width: fit-content;
-//             }
-//         }
-//         .header-content {
-//             p {
-//                 font-size: 15px;
-//             }
-//             .pha1 {
-//                 font-size: 40px;
-//             }
-//             button {
-//                 width: 130px;
-//                 height: 40px;
-//                 font-size: 15px;
-//             }
-//         }
-//     }
-//     nav ul li.btn {
-//         display: block;
-//     }
-// }
+@media all and (max-width:900px) {
+    nav {
+        padding: 5px 30px;
+        ul {
+            justify-content: center;
+            align-items: center;
+        }
+        ul li {
+            &.nav_links {
+                width: 100%;
+                display: none;
+                left: -2%;
+                &.show {
+                    display: block;
+                }
+            }
+            &.btn {
+                display: block;
+            }
+            &:nth-child(6) {
+                width: fit-content;
+            }
+        }
+        .header-content {
+            p {
+                font-size: 15px;
+            }
+            .pha1 {
+                font-size: 40px;
+            }
+            button {
+                width: 130px;
+                height: 40px;
+                font-size: 15px;
+            }
+        }
+    }
+    nav ul li.btn {
+        display: block;
+    }
+}

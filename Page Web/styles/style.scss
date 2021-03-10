@@ -8,7 +8,8 @@
             height: auto;
             display: flex;
             flex-wrap: wrap;
-            margin: 40px;
+            margin: 40px auto;
+            justify-content: flex-end;
           }
         
         .partuno .parttwo {
@@ -17,9 +18,7 @@
         }
         .partuno .parttree {
             padding-left: 20px;
-            width: 50%;
-        }
-
+            width: 41%;        }
     
         .parttree img {
             height: auto;
@@ -49,6 +48,7 @@
             background: white;
             padding-bottom: 10px;
             position: relative;
+            
         }
         
         button {

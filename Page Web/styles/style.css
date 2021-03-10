@@ -286,7 +286,10 @@ nav ul li.btn.hide i:before {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 40px;
+  margin: 40px auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .partuno .parttwo {
@@ -296,7 +299,7 @@ nav ul li.btn.hide i:before {
 
 .partuno .parttree {
   padding-left: 20px;
-  width: 50%;
+  width: 41%;
 }
 
 .parttree img {

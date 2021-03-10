@@ -4,15 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: Montserrat;
-  overflow-x: hidden;  
+  overflow-x: hidden;
 }
 
 header {
-  /* padding: 15px 5%; */
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-color: #46b7e012;
 }
 
 header .header-content {
@@ -203,11 +201,19 @@ nav ul li.btn.hide i:before {
   left: 0;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   z-index: -1;
   max-width: 100%;
   max-height: 100%;
+}
+
+@media all and (max-width: 1200px) {
+  .mVideo {
+    width: 100%;
+    height: auto;
+    background: none;
+  }
 }
 
 .footer {
@@ -273,37 +279,29 @@ nav ul li.btn.hide i:before {
 }
 
 .partuno {
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-count: 2;
-          column-count: 2;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  padding: 90px 70px 50px 150px;
-  column-count: 2;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 50px;
-          column-gap: 50px;
-  -webkit-column-width: 600px;
-          column-width: 600px;
-  -webkit-column-span: all;
-          column-span: all;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 40px;
 }
 
-.partuno.parttwo {
-  padding: 20px;
+.partuno .parttwo {
+  width: 50%;
+  padding: 20px 20px 50px;
 }
 
-.partuno .parttwo p {
-  font-size: 25px;
-  padding-left: 30px;
-  padding-top: 15px;
+.partuno .parttree {
+  padding-left: 20px;
+  width: 50%;
 }
 
-.partuno .parttwo h1 {
-  font-size: 45px;
+.parttree img {
+  height: auto;
+  width: 500px;
 }
 
 .parag {
@@ -314,12 +312,35 @@ nav ul li.btn.hide i:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cardy.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 1000px) {
+  .cardy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .threedivs {
   border: 1px solid #46B6E0;
   -ms-flex-line-pack: center;
       align-content: center;
+  background: white;
+  padding-bottom: 10px;
+  position: relative;
 }
 
 button {
@@ -327,11 +348,18 @@ button {
   border: none;
   border-radius: 20px;
   color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+}
+
+.threedivs .center {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 button:hover {
@@ -534,5 +562,24 @@ main {
 .background-cover {
   background-image: url("../pics/parents.PNG");
   height: 500px;
+}
+
+@media all and (max-width: 1200px) {
+  .partuno {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  .partuno img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

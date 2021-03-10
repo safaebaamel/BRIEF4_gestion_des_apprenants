@@ -3,28 +3,27 @@
         @import "./footer";
         @import "./cover";
         .partuno {
-            display: grid;
-            column-count: 2;
-            grid-template-columns: 1fr 1fr;
-            padding: 90px 70px 50px 150px;
-            column-count: 2;
-            justify-content: center;
-            column-gap: 50px;
-            column-width: 600px;
-            column-span: all;
-            &.parttwo {
-                padding: 20px;
-            }
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            justify-content: flex-end;
         }
         
-        .partuno .parttwo p {
-            font-size: 25px;
-            padding-left: 30px;
-            padding-top: 15px;
+        .partuno .parttwo {
+            width: 50%;
+            padding: 20px 20px 50px;
         }
         
-        .partuno .parttwo h1 {
-            font-size: 45px;
+        .partuno .parttree {
+            padding-left: 20px;
+            width: 41%;
+        }
+        
+        .parttree img {
+            height: auto;
+            width: 500px;
         }
         
         .parag {
@@ -33,11 +32,25 @@
         
         .cardy {
             justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            &.center {
+                justify-content: center;
+            }
+        }
+        
+        @media all and (max-width: 1000px) {
+            .cardy {
+                flex-direction: column;
+            }
         }
         
         .threedivs {
             border: 1px solid #46B6E0;
             align-content: center;
+            background: white;
+            padding-bottom: 10px;
+            position: relative;
         }
         
         button {
@@ -45,11 +58,16 @@
             border: none;
             border-radius: 20px;
             color: white;
+            align-items: center;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
             font-size: 16px;
+        }
+        
+        .threedivs .center {
+            // position: absolute;
+            transform: translateX(50%);
         }
         
         button:hover {
@@ -219,6 +237,18 @@
         .background-cover {
             background-image: url("../pics/parents.PNG");
             height: 500px;
+        }
+        
+        @media all and (max-width: 1200px) {
+            .partuno {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+            .partuno img {
+                width: 100%;
+            }
         }
         
         // @media all and (max-width:700px) {

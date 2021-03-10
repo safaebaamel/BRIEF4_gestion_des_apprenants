@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacter Nous</title>
-    <link rel="stylesheet" href="/Page Web/styles/style.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="/Page Web/scripts/script.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
 
     <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,10 +18,10 @@
 
 <body>
     <!-- header -->
-    <header>
+    <header> 
         <div class="backgroung-cover">
-            <img src="/Page Web/pics/aaron-burden.jpg" alt="">
             <h1>Contacter Nous</h1>
+            <img src="../pics/pic.jpg" alt="" style="background: center center fixed; height: 100%; width: 100%;" class="bg">
         </div>
         <nav>
             <ul>
@@ -38,7 +39,59 @@
     <!-- end main -->
 
     <main>
-        *
+        <section class="contact" >
+            <div class="container">
+              <div class="contactInfo">
+                <div class="box">
+                  <div class="icon">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  </div>
+                  <div class="text">
+                    <h3>Address</h3>
+                    <p>Your Address<br>12000 City, Country</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </div>
+                  <div class="text">
+                    <h3>Phone</h3>
+                    <p>123-456-7890</p>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="text">
+                    <h3>Email</h3>
+                    <p>your@email.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contactForm">
+                <form action="">
+                  <h2>Send Message</h2>
+                  <div class="inputBox">
+                    <input type="text" required="required">
+                    <span>Full Name</span>
+                  </div>
+                  <div class="inputBox">
+                    <input type="email" required="required">
+                    <span>Email</span>
+                  </div>
+                  <div class="inputBox">
+                    <textarea required="required"></textarea>
+                    <span>Your Message...</span>
+                  </div>
+                  <div class="inputBox">
+                    <input type="submit" value="Send">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
     </main>
 
     <!-- footer -->

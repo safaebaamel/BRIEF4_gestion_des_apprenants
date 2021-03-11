@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Montserrat;
 }
 .contact {
   position: relative;
@@ -17,15 +16,14 @@
 }
 
 
+.text-header h1{
+    font-size: 30px;
+}
+
+
 @media screen and (max-width: 1200px) and (min-width: 200px) { 
     .bg {
-      margin-left: -512px;
-      left: 50%;
       width: 100%;
-    }
-    .background-cover {
-        background-color: black;
-        position: relative;
     }
   }
 
@@ -135,4 +133,7 @@
   .contactForm {
     width: 100%;
   }
+  .background-cover .co {
+    font-size: 25px;
+}
 }

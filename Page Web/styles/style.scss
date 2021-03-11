@@ -3,6 +3,11 @@
         @import "./video";
         @import "./footer";
         @import "./cover";
+
+        * {
+            overflow-y: unset;
+        }
+
         .partuno {
             width: 100%;
             height: auto;
@@ -249,33 +254,115 @@
             }
         }
 
+        //___________________cards____________
+        
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+      font-size: 35px;
+      font-weight: 400;
+    //   text-align: center;
+  }
+  .main h1 {
+      text-align: center;
+  }
+  
 
-        // @media all and (max-width:700px) {
-        //     .notre-ecole {
-        //         display: flex;
-        //         flex-wrap: wrap;
-        //     }
-        //     .notre-ecole .description {
-        //         margin: 0;
-        //         margin-bottom: 20px;
-        //         width: 100%;
-        //     }
-        //     .image {
-        //         width: fit-content;
-        //         margin: 0 auto;
-        //         margin-top: 20px;
-        //     }
-        // }
-        // .form-login {
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-        //     margin: auto;
-        //     width: fit-content;
-        //     // background-color: #46B6E0;
-        //     .big-title {
-        //         font-weight: 800px;
-        //         font-size: 50px;
-        //     }
-        // }
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+
+
+  .void{
+      margin-top: 16px;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+    
+  }
+  @media (max-width: 1055px) {
+    header{
+        height: 295px;
+    }
+    .main h1 {
+        font-size: 25px;
+        padding: 15px 15px;
+    }
+    
+  }
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .card_content {
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom left, #00bcd4 40%, #00bcd4 100%);
+  }
+  
+  .card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }

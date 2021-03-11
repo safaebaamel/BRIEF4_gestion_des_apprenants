@@ -14,11 +14,9 @@ nav {
                 color: #FFF;
             }
             &:nth-child(6) {
-                background-color: #46B6E0;
-                padding: 10px;
-                border-radius: 20px;
-                width: fit-content;
+                width: -moz-fit-content;
                 color: #FFF;
+                -webkit-transition: background-color .35s ease-in-out;
                 transition: background-color .35s ease-in-out;
                 &::after {
                     all: unset !important;
@@ -69,7 +67,6 @@ nav {
                 i {
                     width: 35px;
                     height: 35px;
-                    // color: yellow;
                 }
             }
             &:hover a {

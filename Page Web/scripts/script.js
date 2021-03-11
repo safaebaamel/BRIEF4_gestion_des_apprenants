@@ -7,9 +7,9 @@ $(document).ready(function() {
 });
 
 
-const form = document.getElementById('form')
-const name = document.getElementById('name')
-const email = document.getElementById('email')
+const form = document.getElementById('form').value
+const name = document.getElementById('name').value
+const email = document.getElementById('email').value
 const errorElement = document.getElementById('error')
 const message = document.getElementById('message')
 
@@ -18,13 +18,15 @@ form.addEventListener('submit', (e) => {
     if (name.value == '' || name.value == null) {
         messages.push('Name is required')
     }
-    if (message.length < 6) {
-        prompt('Password mush be longer than 6 characters')
-    }
-
     if (messages.length > 0) {
     e.preventDefault()
     errorElement.innerText = messages.join(', ')
     }
 
 })
+
+function verfymail() {
+    var email = document.getElementById("email").value;
+    var verif = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
+    return verif.test(email);
+}

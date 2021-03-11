@@ -68,24 +68,25 @@
                     </div>
                 </div>
                 <div class="contactForm">
-                    <form action="">
+                    <form action="/" id="form" method="GET">
                         <h2>Send Message</h2>
                         <div class="inputBox">
-                            <input type="text" required="required">
+                            <input id="name" type="text" name="name" required="required">
                             <span>Full Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="email" required="required">
+                            <input type="email" id="email" name="email" required="required">
                             <span>Email</span>
                         </div>
                         <div class="inputBox">
-                            <textarea required="required"></textarea>
+                            <textarea required="required" id="messages"></textarea>
                             <span>Your Message...</span>
                         </div>
                         <div class="inputBox">
                             <input type="submit" value="Send">
                         </div>
                     </form>
+                    <div id="error"></div>
                 </div>
             </div>
         </section>

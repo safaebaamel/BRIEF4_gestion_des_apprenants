@@ -239,6 +239,24 @@ h1 {
   font-size: 60px;
 }
 
+.sidbar-top {
+  background-color: #46B6E0;
+  height: 4em;
+  width: 80%;
+  position: relative;
+  left: 20%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .partuno {
   width: 100%;
   height: auto;
@@ -441,8 +459,9 @@ main {
 }
 
 .shadow {
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #00000030;
+  box-shadow: 4px 5px 10px 0px #00000061;
+  border-radius: 15px;
 }
 
 .form-login {
@@ -451,15 +470,16 @@ main {
   padding: 45px;
   margin: 27px 0px;
   position: relative;
-  height: 350px;
+  height: 400px;
 }
 
 .form-login a {
   position: absolute;
   right: 43px;
+  bottom: 125px;
 }
 
-.form-login button {
+button {
   position: absolute;
   bottom: 25px;
   right: 50%;
@@ -495,11 +515,11 @@ main {
 .login .email,
 .login .password {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .login .form-login .input {
-  padding: 10px;
+  padding: 15px;
   text-indent: 40px;
   width: 26em;
   font-size: 20px;
@@ -507,20 +527,20 @@ main {
 
 .login .form-login .fa {
   position: absolute;
-  top: 11px;
-  left: 8px;
+  top: 16px;
+  left: 15px;
   font-size: 27px;
   overflow: visible;
 }
 
 .login .form-login .fa:after {
   content: '';
-  height: 47.5px;
-  width: 2px;
+  height: 56.5px;
+  width: 1px;
   background-color: #000;
   position: absolute;
-  left: 32px;
-  top: -11px;
+  left: 33px;
+  top: -15px;
 }
 
 .background-cover {
@@ -545,5 +565,291 @@ main {
   .partuno img {
     width: 100%;
   }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sidebar {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #46B6E0;
+}
+
+.container .menu {
+  background-color: #46B6E0;
+  text-align: center;
+  padding: 20px;
+  border-style: solid;
+  border-color: rgba(124, 122, 122, 0.335);
+  text-decoration: none;
+  display: inline-block;
+  color: #FFF;
+}
+
+.right_centent {
+  width: 100%;
+}
+
+.right_centent .hori_sidebar {
+  background-color: #46B6E0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.right_centent .centnet {
+  background-color: #FFF;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+}
+
+.right_centent .centnet .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.right_centent .centnet .circle .circle-info {
+  text-align: center;
+  width: 100px;
+  vertical-align: revert;
+}
+
+.right_centent .centnet .circle .circle-info .count {
+  background-color: #BCE0FD;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  line-height: 150px;
+  font-size: 50px;
+  margin: 0 0 15px 0px;
+}
+
+.right_centent .centnet .circle .circle-info .nom {
+  width: 150px;
+}
+
+.right_centent .centnet .statistic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 48px auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.gestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.gestion .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: inherit;
+  cursor: pointer;
+}
+
+.gestion .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.gestion .addEtudiant {
+  margin: auto;
+  background-color: #00000063;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 5px solid #03cdff;
+  padding: 20px;
+  width: 80%;
+}
+
+.gestion .addEtudiant .addEtudiant-child {
+  position: relative;
+  background-color: steelblue;
+  height: 100%;
+  width: 100%;
+}
+
+.gestion .addEtudiant .addEtudiant-child span {
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bolder;
+  color: white;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+  -webkit-transition: background-color .35s ease-in-out;
+  transition: background-color .35s ease-in-out;
+}
+
+.gestion .addEtudiant .addEtudiant-child span:hover {
+  background-color: #0d0d0d;
+}
+
+.gestion .addEtudiant form h2 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+}
+
+.gestion .addEtudiant form .inputs input,
+.gestion .addEtudiant form .inputs label {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+}
+
+.gestion .addEtudiant form .inputs label {
+  color: #8a0000;
+  font-size: 15px;
+}
+
+.gestion .addEtudiant form .inputs input {
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.gestion .addEtudiant form .select {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+}
+
+.gestion .addEtudiant form .btn {
+  background-color: #46B6E0;
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 20px auto;
+  font-size: 20px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-transition: background-color .35s ease-in-out, color .35s ease-in-out;
+  transition: background-color .35s ease-in-out, color .35s ease-in-out;
+}
+
+.gestion .addEtudiant form .btn:hover {
+  background-color: #1c7fa4;
+}
+
+.gestion .addEtudiant form .btn:active {
+  color: white;
+  background-color: #114c63;
+}
+
+.table-etudiant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  /* .table-etudiant table th.operation span:before {
+            content: " | ";
+        } */
+}
+
+.table-etudiant table {
+  width: 80%;
+  border: solid 1px #707070;
+  border-collapse: collapse;
+  height: 200px;
+  margin: auto;
+}
+
+.table-etudiant table th {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: solid 1px #707070;
+  padding: 10px;
+}
+
+.table-etudiant td {
+  border: solid 1px #707070;
+  padding: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

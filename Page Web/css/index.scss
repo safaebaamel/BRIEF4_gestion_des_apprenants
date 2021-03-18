@@ -2,6 +2,7 @@
 @import "./footer";
 @import "./cards";
 @import "./sign";
+@import "./contact";
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -437,6 +438,7 @@ $color_grey_dark: #a2a2a2;
 //dashbord style
 .container {
     display: flex;
+    margin-top: 0;
     // height: 100vh;
     .sidebar {
         width: 20%;
@@ -459,6 +461,7 @@ $color_grey_dark: #a2a2a2;
 
 .right_centent {
     width: 100%;
+    height: 100vh;
     .hori_sidebar {
         background-color: #46B6E0;
         display: flex;

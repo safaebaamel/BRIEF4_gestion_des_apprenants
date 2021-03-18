@@ -9,6 +9,7 @@ include('../../connexion/connexion.php');
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <title>gestion etudiant</title>
         <link rel="stylesheet" href="../../css/index.css">
         <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
@@ -24,9 +25,9 @@ include('../../connexion/connexion.php');
                 <ul>
                     <li class="logo">Schol<span>ariz</span></li>
                     <li class="nav_links"><a href="/index.html">Accueil</a></li>
-                    <li class="nav_links"><a href="/Page Web/pages/Notre_Ecole.html">Notre Ecole</a></li>
-                    <li class="nav_links"><a href="/Page Web/pages/Contactez_Nous.html">Contactez Nous</a></li>
-                    <li class="nav_links li_btn"><a href="/Page Web/pages/Se_connecter.php">Se connecter</a></li>
+                    <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
+                    <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
+                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>
                     <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
                 </ul>
             </nav>
@@ -46,12 +47,12 @@ include('../../connexion/connexion.php');
             <div class="right_centent">
                 <div class="hori_sidebar">
                     <p>administrateur</p>
-                    <a href="/Page Web/pages/Se_connecter.php">Deconextion</a>
+                    <a href="../pages/Se_connecter.php">Deconnexion</a>
                 </div>
                 <div class="centnet">
                     <div class="gestion">
                         <div class="add">
-                            <a href="#"><img src="/Page Web/pics/icons/plus.png" alt=""></a>
+                            <a href="#"><img src="../../pics/icons/plus.png" alt=""></a>
                         </div>
                         <div class="table-etudiant">
                             <table>
@@ -99,8 +100,8 @@ include('../../connexion/connexion.php');
                                 $Groupe = $row["groupe_name"];
                                 $Username = $row["Status"];
 
-                                echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td>' .  $dateDeNaissance . '</td><td>' . $cNE . '</td><td>' . $cIN . '</td><td>' . $genre . '</td><td>' . $Groupe . '</td><td>' .  $Username . '</td><td><img src="/Page Web/pics/icons/Icon awesome-edit.png" alt=""></td>
-                                <td><img src="/Page Web/pics/icons/Icon material-delete.png" alt=""></td></tr>';
+                                echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td>' .  $dateDeNaissance . '</td><td>' . $cNE . '</td><td>' . $cIN . '</td><td>' . $genre . '</td><td>' . $Groupe . '</td><td>' .  $Username . '</td><td><img src="../../pics/Icon awesome-edit.png" alt=""></td>
+                                <td><img src="../../pics/Icon material-delete.png" alt=""></td></tr>';
 
 
                                 // echo '<tr><td>' . $row["ID_etudiant"] . '</td><td>' . $row["nom"] . '</td><td>' . $row["prenom"] . '</td><td>' . $row["date_naissance"] . '</td><td>' . $row["CNE"] . '</td><td>' . $row["CIN"] . '</td><td>' . $row["genre"] . '</td><td>' . $row["ID_grp"] . '</td><td>' . $row["ID_compte"] . '</td><td><img src="/Page Web/pics/icons/Icon awesome-edit.png" alt=""></td>
@@ -186,7 +187,7 @@ include('../../connexion/connexion.php');
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="/Page Web/scripts/script.js"></script>
+        <script src="../../scripts/script.js"></script>
         <!-- end footer -->
     </body>
 

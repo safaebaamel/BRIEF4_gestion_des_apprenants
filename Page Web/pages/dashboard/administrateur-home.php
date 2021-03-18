@@ -23,9 +23,9 @@
             <ul>
                 <li class="logo">Schol<span>ariz</span></li>
                 <li class="nav_links"><a href="/index.html">Accueil</a></li>
-                <li class="nav_links"><a href="/Page Web/pages/Notre_Ecole.html">Notre Ecole</a></li>
-                <li class="nav_links"><a href="/Page Web/pages/Contactez_Nous.html">Contactez Nous</a></li>
-                <li class="nav_links li_btn"><a href="/Page Web/pages/Se_connecter.php">Se connecter</a></li>
+                <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
+                <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
+                <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>
                 <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>

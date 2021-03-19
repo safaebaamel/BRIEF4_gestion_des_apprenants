@@ -53,7 +53,7 @@
         <div class="right_centent">
             <div class="hori_sidebar">
                 <p>administrateur</p>
-                <a href="/Page Web/pages/Se_connecter.php">Deconextion</a>
+                <a href="../../pages/Se_connecter.php">Deconextion</a>
             </div>
             <div class="centnet">
                 <div class="circle">
@@ -93,10 +93,10 @@
                 </div>
                 <div class="statistic">
                     <div class="chart-bar">
-                        <img src="/Page Web/pics/statistic/1.png" alt="chart graphic">
+                        <img src="../../pics/statistic/1.png" alt="chart graphic">
                     </div>
                     <div class="line-bar">
-                        <img src="/Page Web/pics/statistic/2.png" alt="line bar">
+                        <img src="../../pics/statistic/2.png" alt="line bar">
                     </div>
                 </div>
             </div>

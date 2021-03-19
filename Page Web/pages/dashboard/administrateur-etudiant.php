@@ -47,7 +47,7 @@ include('../../connexion/connexion.php');
             <div class="right_centent">
                 <div class="hori_sidebar">
                     <p>administrateur</p>
-                    <a href="../pages/Se_connecter.php">Deconnexion</a>
+                    <a href="../../pages/Se_connecter.php">Deconextion</a>
                 </div>
                 <div class="centnet">
                     <div class="gestion">
@@ -100,8 +100,8 @@ include('../../connexion/connexion.php');
                                 $Groupe = $row["groupe_name"];
                                 $Username = $row["Status"];
 
-                                echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td>' .  $dateDeNaissance . '</td><td>' . $cNE . '</td><td>' . $cIN . '</td><td>' . $genre . '</td><td>' . $Groupe . '</td><td>' .  $Username . '</td><td><img src="../../pics/Icon awesome-edit.png" alt=""></td>
-                                <td><img src="../../pics/Icon material-delete.png" alt=""></td></tr>';
+                                echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td>' .  $dateDeNaissance . '</td><td>' . $cNE . '</td><td>' . $cIN . '</td><td>' . $genre . '</td><td>' . $Groupe . '</td><td>' .  $Username . '</td><td><a href="#"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
+                                <td><a href="service/deleteetudiant.php?del_id='.$id.'"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td></tr>';
 
 
                                 // echo '<tr><td>' . $row["ID_etudiant"] . '</td><td>' . $row["nom"] . '</td><td>' . $row["prenom"] . '</td><td>' . $row["date_naissance"] . '</td><td>' . $row["CNE"] . '</td><td>' . $row["CIN"] . '</td><td>' . $row["genre"] . '</td><td>' . $row["ID_grp"] . '</td><td>' . $row["ID_compte"] . '</td><td><img src="/Page Web/pics/icons/Icon awesome-edit.png" alt=""></td>

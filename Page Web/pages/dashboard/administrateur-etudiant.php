@@ -110,7 +110,7 @@ if (!empty($_SESSION['idadmin'])) {
                                     $email = $row["email"];
                                     $status = $row["Status"];
 
-                                    echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td id="notShow">' .  $dateDeNaissance . '</td><td id="notShow">' . $cNE . '</td><td id="notShow">' . $cIN . '</td><td id="notShow">' . $genre . '</td><td id="notShow">' . $Groupe . '</td><td id="notShow">' .  $email . '</td><td id="notShow">' .  $status . '</td><td><a href="#"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
+                                    echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td id="notShow">' .  $dateDeNaissance . '</td><td id="notShow">' . $cNE . '</td><td id="notShow">' . $cIN . '</td><td id="notShow">' . $genre . '</td><td id="notShow">' . $Groupe . '</td><td id="notShow">' .  $email . '</td><td id="notShow">' .  $status . '</td><td><a href="service/updateetudiant.php?update=' . $id . '"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
                                 <td><a href="service/deleteetudiant.php?del_id=' . $id . '"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td></tr>';
 
 

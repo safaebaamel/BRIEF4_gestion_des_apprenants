@@ -60,7 +60,7 @@ if (isset($_POST['Ajouter'])) {
         $id_compte = $row['ID'];
         // echo 'Nom : ' . $nom . ' prenom :  ' . $prenom . ' date :  ' . $dateNaissance . ' cne :  ' . $cne . ' cin : ' . $cin . ' genre :  ' . $genre . ' groupe :  ' . $groupe . ' email :  ' . $email . ' password :  ' . $password;
         // echo 'Nom : ' . $id_compte;
-        // $query3 = "INSERT INTO `etudiant`(`nom`, `prenom`, `date_naissance`, `CNE`,`CIN`,`genre`,`ID_grp`,`ID_compte`) VALUES ('$nom','$prenom','$dateNaissance','$cne','$cin', '$genre','$groupe','$id_compte')";
+        $query3 = "INSERT INTO `etudiant`(`nom`, `prenom`, `date_naissance`, `CNE`,`CIN`,`genre`,`ID_grp`,`ID_compte`) VALUES ('$nom','$prenom','$dateNaissance','$cne','$cin', '$genre','$groupe','$id_compte')";
         mysqli_query($connect, $query3);
          header("location:../administrateur-etudiant.php");
 

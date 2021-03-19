@@ -1,7 +1,7 @@
 <?php
 include('../connexion.php');
-?>
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +39,54 @@ include('../connexion.php');
     <div class="container">
 
         <div class="sidebar">
+=======
+ session_start();
+  if (isset($_GET['deconnect'])){
+        unset($_SESSION['idadmin']);
+        header("Location: ../Se_connecter.php");
+    } 
+    if (!empty($_SESSION['idadmin'])) {
+
+
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <title>gestion etudiant</title>
+        <link rel="stylesheet" href="../../css/index.css">
+        <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+
+            <nav>
+                <ul>
+                    <li class="logo">Schol<span>ariz</span></li>
+                    <li class="nav_links"><a href="../../../index.html">Accueil</a></li>
+                    <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
+                    <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
+                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>
+                    <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <!-- end main -->
+
+        <div class="container">
+
+            <div class="sidebar">
+>>>>>>> e96856e058b9f57ab1ded7be1829d79db5708b9d
             <a class="menu" href="administrateur-home.php">home</a>
             <a class="menu" href="#">Gestion des groupes</a>
             <a class="menu" href="#">Gestion des comptes</a>
@@ -49,6 +97,7 @@ include('../connexion.php');
                 <p>administrateur</p>
                 <a href="../../pages/Se_connecter.php">Deconextion</a>
             </div>
+<<<<<<< HEAD
             <div class="centnet">
                 <div class="gestion">
                     <div class="add">
@@ -70,6 +119,34 @@ include('../connexion.php');
                                 <th class="operation">Sup</th>
                             </tr>
                             <?php
+=======
+            <div class="right_centent">
+                <div class="hori_sidebar">
+                    <p>administrateur</p>
+                    <a href="../../pages/dashboard/administrateur-home.php?deconnect">Deconnexion</a>
+                </div>
+                <div class="centnet">
+                    <div class="gestion">
+                        <div class="add">
+                            <a href="#"><img src="../../pics/icons/plus.png" alt=""></a>
+                        </div>
+                        <div class="table-etudiant">
+                            <table>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nom</td>
+                                        <th>Prenom</td>
+                                            <th>Date de naissance</th>
+                                            <th>CNE</th>
+                                            <th>CIN</th>
+                                            <th>genre</th>
+                                            <th>Groupe</th>
+                                            <th>Username</th>
+                                            <th class="operation">Mod</th>
+                                            <th class="operation">Sup</th>
+                                </tr>
+                                <?php
+>>>>>>> e96856e058b9f57ab1ded7be1829d79db5708b9d
 
 
                             // $query = "SELECT * FROM `etudiant`";
@@ -201,6 +278,7 @@ include('../connexion.php');
             <div class="row ">
                 Copyright © 2021 Scholariz - All rights reserved
             </div>
+<<<<<<< HEAD
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -209,3 +287,14 @@ include('../connexion.php');
 </body>
 
 </html>
+=======
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="../../scripts/script.js"></script>
+        <!-- end footer -->
+    </body>
+    </html>
+    <?php }else {
+        header("Location: ../Se_connecter.php");
+    } ?>
+>>>>>>> e96856e058b9f57ab1ded7be1829d79db5708b9d

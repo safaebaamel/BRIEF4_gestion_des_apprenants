@@ -6,11 +6,12 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $query = "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' ";
-    $test = mysqli_query($connect, "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' ");
+    $test = mysqli_query($connect, "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' AND role= 1");
     $row= mysqli_fetch_array($test);
-
+    
     if (mysqli_num_rows($test)>0) {
         $_SESSION['email'] = $email;
+        $_SESSION['idadmin'] = $row['role'];
         header("Location:  dashboard/administrateur-home.php");
     } else {
         $_SESSION['err'] = "password incorrect";
@@ -61,7 +62,7 @@ if(isset($_POST['submit'])) {
         <h2 class="sous-title">Justinmind Account</h2>
         <span class="error" style="color:red; text-align: center;"><?php echo  $_SESSION['err']; ?></span>
         <br>
-        <form method="POST" class="form-login shadow">
+        <form method="POST" class="form-login shadow" action="Se_connecter.php">
             <label for="#email" class="label-name">your email</label>
             <div class="email">
                 <i class="fa fa-user" aria-hidden="true"></i>

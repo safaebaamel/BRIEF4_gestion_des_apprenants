@@ -1,7 +1,15 @@
 <?php
 include('../connexion.php');
-?>
 
+ session_start();
+  if (isset($_GET['deconnect'])){
+        unset($_SESSION['idadmin']);
+        header("Location: ../Se_connecter.php");
+    } 
+    if (!empty($_SESSION['idadmin'])) {
+
+
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -47,7 +55,7 @@ include('../connexion.php');
             <div class="right_centent">
                 <div class="hori_sidebar">
                     <p>administrateur</p>
-                    <a href="../../pages/Se_connecter.php">Deconextion</a>
+                    <a href="../../pages/dashboard/administrateur-home.php?deconnect">Deconnexion</a>
                 </div>
                 <div class="centnet">
                     <div class="gestion">
@@ -190,5 +198,7 @@ include('../connexion.php');
         <script src="../../scripts/script.js"></script>
         <!-- end footer -->
     </body>
-
     </html>
+    <?php }else {
+        header("Location: ../Se_connecter.php");
+    } ?>

@@ -52,13 +52,17 @@ if (isset($_POST['Ajouter'])) {
         $erreurpassword = "champ obligatoire";
     }
     if ($nom != "" && $prenom != "" && $dateNaissance != "" && $cne != "" && $cin != "" && $genre != "" && $groupe != "" && $email != "" && $password != "") {
-        $query1 = "INSERT INTO `compte`(`role`, `email`, `passwd`) VALUES (2,'$email','$password')";
-       $query2 = "SELECT ID FROM compte ORDER BY ID DESC LIMIT 1";
+        $query1 = "INSERT INTO `compte`(`role`, `email`, `passwd`,`Status`) VALUES ('2','$email','$password','ETUDIANT')";
+        $query2 = "SELECT ID FROM compte ORDER BY ID DESC LIMIT 1";
         $result_compte1 = mysqli_query($connect, $query1);
         $result_compte2 = mysqli_query($connect, $query2);
-        $id_compte = $result_compte2->fetch_assoc();
-        echo 'Nom : ' . $nom. ' prenom :  ' . $prenom . ' date :  ' . $dateNaissance . ' cne :  ' . $cne . ' cin : ' . $cin . ' genre :  ' . $genre . ' groupe :  ' . $groupe . ' email :  ' . $email . ' password :  ' . $password ; 
-        $query3 = "INSERT INTO `etudiant`(`nom`, `prenom`, `date_naissance`, `CNE`,`CIN`,`genre`,`ID_grp`,`ID_compte`) VALUES ('$nom','$prenom','$dateNaissance','$cne','$cin', '$genre','$groupe','1')";
-         mysqli_query($connect, $query3);
+        $row = $result_compte2->fetch_assoc();
+        $id_compte = $row['ID'];
+        // echo 'Nom : ' . $nom . ' prenom :  ' . $prenom . ' date :  ' . $dateNaissance . ' cne :  ' . $cne . ' cin : ' . $cin . ' genre :  ' . $genre . ' groupe :  ' . $groupe . ' email :  ' . $email . ' password :  ' . $password;
+        // echo 'Nom : ' . $id_compte;
+        // $query3 = "INSERT INTO `etudiant`(`nom`, `prenom`, `date_naissance`, `CNE`,`CIN`,`genre`,`ID_grp`,`ID_compte`) VALUES ('$nom','$prenom','$dateNaissance','$cne','$cin', '$genre','$groupe','$id_compte')";
+        mysqli_query($connect, $query3);
+         header("location:../administrateur-etudiant.php");
+
     }
 }

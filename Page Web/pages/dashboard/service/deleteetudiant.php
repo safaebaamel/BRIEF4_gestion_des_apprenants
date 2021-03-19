@@ -1,5 +1,5 @@
 <?php
-include('../../../connexion/connexion.php');
+include('../../connexion.php');
 
 
 if (isset($_GET['del_id'])) {

@@ -1,5 +1,5 @@
 <?php
-include('../../connexion/connexion.php');
+include('../connexion.php');
 ?>
 
     <!DOCTYPE html>
@@ -24,7 +24,7 @@ include('../../connexion/connexion.php');
             <nav>
                 <ul>
                     <li class="logo">Schol<span>ariz</span></li>
-                    <li class="nav_links"><a href="/index.html">Accueil</a></li>
+                    <li class="nav_links"><a href="../../../index.html">Accueil</a></li>
                     <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
                     <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
                     <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>

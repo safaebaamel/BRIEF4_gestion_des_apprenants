@@ -1,3 +1,26 @@
+<?php
+ include("connexion.php");
+session_start();
+$_SESSION['err']='';
+if(isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $query = "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' ";
+    $test = mysqli_query($connect, "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' ");
+    $row= mysqli_fetch_array($test);
+
+    if (mysqli_num_rows($test)>0) {
+        $_SESSION['email'] = $email;
+        header("Location:  dashboard/administrateur-home.php");
+    } else {
+        $_SESSION['err'] = "password incorrect";
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,20 +59,22 @@
     <div class="login">
         <h1 class="big-title" style="padding-top: 100px;">Sign in to your</h1>
         <h2 class="sous-title">Justinmind Account</h2>
-        <form action="" class="form-login shadow">
+        <span class="error" style="color:red; text-align: center;"><?php echo  $_SESSION['err']; ?></span>
+        <br>
+        <form method="POST" class="form-login shadow">
             <label for="#email" class="label-name">your email</label>
             <div class="email">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email">
+                <input name="email" class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email" required>
             </div>
             <label for="#password" class="label-name">your password</label>
             <div class="password">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input class="input" type="password" placeholder="your password here" id="password">
+                <input class="input" type="password" name="password" placeholder="your password here" id="password" required>
             </div>
 
             <!-- <a href="#">Forget password ?</a> -->
-            <button onclick="" class="button"><a href="dashboard/administrateur-home.php">Sign in</a></button>
+            <button onclick="" type="submit" name="submit" class="button">Sign in</a></button>
         </form>
 
     </div>

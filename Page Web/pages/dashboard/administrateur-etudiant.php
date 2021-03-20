@@ -54,7 +54,7 @@ if (!empty($_SESSION['idadmin'])) {
             <div class="right_centent">
                 <div class="hori_sidebar">
                     <p>administrateur</p>
-                    <a href="../../pages/Se_connecter.php">Deconextion</a>
+                    <a href="../../pages/dashboard/administrateur-home.php?deconnect">Deconnexion</a>
                 </div>
                 <div class="centnet">
                     <div class="gestion">

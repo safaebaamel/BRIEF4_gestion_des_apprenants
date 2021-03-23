@@ -124,16 +124,16 @@ if (!empty($_SESSION['idadmin'])) {
                             <div class="addEtudiant">
                                 <div class="addEtudiant-child">
                                     <span class="close">X</span>
-                                    <form action="service/createetudiant.php" method="POST">
+                                    <form action="service/createetudiant.php" method="POST" id="form">
                                         <h2 class="title">
                                             Ajouter un etudiant
                                         </h2>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
+                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
                                             <label for="nom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
+                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
                                             <label for="prenom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -141,11 +141,11 @@ if (!empty($_SESSION['idadmin'])) {
                                             <label for="date_naissance" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
+                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
                                             <label for="cne" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
+                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
                                             <label for="cin" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -180,6 +180,7 @@ if (!empty($_SESSION['idadmin'])) {
                                             <label for="password" class="controler">champ obligatoire</label>
                                         </div>
                                         <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">
+                                        <div class="error"></div>
                                     </form>
                                 </div>
                             </div>
@@ -188,18 +189,6 @@ if (!empty($_SESSION['idadmin'])) {
                 </div>
             </div>
         </div>
-
-    <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-    </div>
-
-    </div>
-
-
 
 
         </div>

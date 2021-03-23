@@ -33,9 +33,9 @@ if (!empty($_SESSION['idadmin'])) {
                 <ul>
                     <li class="logo">Schol<span>ariz</span></li>
                     <li class="nav_links"><a href="../../../index.html">Accueil</a></li>
-                    <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
-                    <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
-                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>
+                    <!-- <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li> -->
+                    <!-- <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
+                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li> -->
                     <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
                 </ul>
             </nav>
@@ -74,8 +74,8 @@ if (!empty($_SESSION['idadmin'])) {
                                     <th id="notShow">Groupe</th>
                                     <th id="notShow">Email</th>
                                     <th id="notShow">Status</th>
-                                    <th class="operation">Mod</th>
-                                    <th class="operation">Sup</th>
+                                    <th class="operation modaledit">Mod</th>
+                                    <th class="operation modalsu">Sup</th>
                                 </tr>
                                 <?php
 
@@ -179,7 +179,7 @@ if (!empty($_SESSION['idadmin'])) {
                                             <input type="password" class="input_style" id="password" name="password" placeholder="Entrer password">
                                             <label for="password" class="controler">champ obligatoire</label>
                                         </div>
-                                        <input type="submit" class="btn" value="Ajouter" name="Ajouter">
+                                        <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">
                                     </form>
                                 </div>
                             </div>
@@ -189,7 +189,15 @@ if (!empty($_SESSION['idadmin'])) {
             </div>
         </div>
 
+    <div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+    </div>
+
+    </div>
 
 
 

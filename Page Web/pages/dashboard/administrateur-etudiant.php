@@ -228,10 +228,6 @@ if (!empty($_SESSION['idadmin'])) {
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6f9325e28b322ba21ba508985ccbeec0620c075d
         </div>
         <!-- footer  -->
         <footer>

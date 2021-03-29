@@ -74,14 +74,15 @@
                     </div>
                 </div>
                 <div class="contactForm">
-                    <form action="/" id="form" method="GET">
+                    <form action="" id="form" method="GET">
                         <h2>Send Message</h2>
                         <div class="inputBox">
-                            <input id="name" type="text" name="name" required="required">
+                            <input id="name" type="text" pattern="[a-zA-Z]{3,}" name="name" required="required">
                             <span>Full Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="email" id="email" name="email" required="required">
+                            <input type="email" pattern="^([a-zA-Z\d\.]+)@([a-z\d-]+)\.([a-z]{2,8})$" id="email"
+                                name="email" required="required">
                             <span>Email</span>
                         </div>
                         <div class="inputBox">
@@ -89,7 +90,7 @@
                             <span>Your Message...</span>
                         </div>
                         <div class="inputBox">
-                            <input type="submit" value="Send">
+                            <input type="submit" id="myBtn" value="Send" onclick="">
                         </div>
                     </form>
                     <div id="error"></div>

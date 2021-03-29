@@ -33,9 +33,9 @@ if (!empty($_SESSION['idadmin'])) {
                 <ul>
                     <li class="logo">Schol<span>ariz</span></li>
                     <li class="nav_links"><a href="../../../index.html">Accueil</a></li>
-                    <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li>
-                    <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
-                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li>
+                    <!-- <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li> -->
+                    <!-- <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li>
+                    <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li> -->
                     <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
                 </ul>
             </nav>
@@ -55,7 +55,7 @@ if (!empty($_SESSION['idadmin'])) {
             <div class="right_centent">
                 <div class="hori_sidebar">
                     <p>administrateur</p>
-                    <a href="../../pages/Se_connecter.php">Deconextion</a>
+                    <a href="../../pages/dashboard/administrateur-home.php?deconnect">Deconnexion</a>
                 </div>
                 <div class="centnet">
                     <div class="gestion">
@@ -75,8 +75,8 @@ if (!empty($_SESSION['idadmin'])) {
                                     <th id="notShow">Groupe</th>
                                     <th id="notShow">Email</th>
                                     <th id="notShow">Status</th>
-                                    <th class="operation">Mod</th>
-                                    <th class="operation">Sup</th>
+                                    <th class="operation modaledit">Mod</th>
+                                    <th class="operation modalsu">Sup</th>
                                 </tr>
                                 <?php
 
@@ -162,16 +162,16 @@ if (!empty($_SESSION['idadmin'])) {
                             <div class="addEtudiant">
                                 <div class="addEtudiant-child">
                                     <span class="close">X</span>
-                                    <form action="service/createetudiant.php" method="POST">
+                                    <form action="service/createetudiant.php" method="POST" id="form">
                                         <h2 class="title">
                                             Ajouter un etudiant
                                         </h2>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
+                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
                                             <label for="nom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
+                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
                                             <label for="prenom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -179,11 +179,11 @@ if (!empty($_SESSION['idadmin'])) {
                                             <label for="date_naissance" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
+                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
                                             <label for="cne" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
+                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
                                             <label for="cin" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -217,7 +217,8 @@ if (!empty($_SESSION['idadmin'])) {
                                             <input type="password" class="input_style" id="password" name="password" placeholder="Entrer password">
                                             <label for="password" class="controler">champ obligatoire</label>
                                         </div>
-                                        <input type="submit" class="btn" value="Ajouter" name="Ajouter">
+                                        <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">
+                                        <div class="error"></div>
                                     </form>
                                 </div>
                             </div>
@@ -227,6 +228,10 @@ if (!empty($_SESSION['idadmin'])) {
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f9325e28b322ba21ba508985ccbeec0620c075d
         </div>
         <!-- footer  -->
         <footer>

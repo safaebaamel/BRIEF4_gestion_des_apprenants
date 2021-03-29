@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
             <label for="#email" class="label-name">your email</label>
             <div class="email">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input name="email" class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email" required>
+                <input name="email" pattern="^([a-zA-Z\d\.]+)@([a-z\d-]+)\.([a-z]{2,8})$" class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email" required>
             </div>
             <label for="#password" class="label-name">your password</label>
             <div class="password">

@@ -49,6 +49,7 @@ if (!empty($_SESSION['idadmin'])) {
             <div class="sidebar">
                 <a class="menu" href="administrateur-home.php">home</a>
                 <a class="menu" href="#">Gestion des groupes</a>
+                <a class="menu" href="#">Gestion des comptes</a>
                 <a class="menu" href="administrateur-etudiant.php">Gestion des Etudiants</a>
             </div>
             <div class="right_centent">
@@ -95,7 +96,7 @@ if (!empty($_SESSION['idadmin'])) {
 
 
                                 $query = "SELECT e.ID_etudiant , e.nom,e.prenom,e.date_naissance,e.CNE,e.CIN,e.genre,g.groupe_name,c.email,c.Status FROM `etudiant` as e INNER join `groupe` as g on (e.ID_grp=g.ID_groupe) INNER JOIN `compte` as c ON (e.ID_compte=c.ID)
-                            ";
+                            order by e.ID_etudiant";
 
                                 $result = mysqli_query($connect, $query);
                                 while ($row = $result->fetch_assoc()) {
@@ -110,8 +111,11 @@ if (!empty($_SESSION['idadmin'])) {
                                     $email = $row["email"];
                                     $status = $row["Status"];
 
-                                    echo '<tr><td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td id="notShow">' .  $dateDeNaissance . '</td><td id="notShow">' . $cNE . '</td><td id="notShow">' . $cIN . '</td><td id="notShow">' . $genre . '</td><td id="notShow">' . $Groupe . '</td><td id="notShow">' .  $email . '</td><td id="notShow">' .  $status . '</td><td><a href="service/updateetudiant.php?update=' . $id . '"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
-                                <td><a href="service/deleteetudiant.php?del_id=' . $id . '"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td></tr>';
+
+                                    echo '<tr>
+                                    <td>' . $id . '</td><td>' . $nom . '</td><td>' . $prenom . '</td><td id="notShow">' .  $dateDeNaissance . '</td><td id="notShow">' . $cNE . '</td><td id="notShow">' . $cIN . '</td><td id="notShow">' . $genre . '</td><td id="notShow">' . $Groupe . '</td><td id="notShow">' .  $email . '</td><td id="notShow">' .  $status . '</td><td><a class="edit_etudiant" data-id=' . $id . ' href="#"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
+                                <td><a href="service/deleteetudiant.php?del_id=' . $id . '"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td>
+                                </tr>';
 
 
                                     // echo '<tr><td>' . $row["ID_etudiant"] . '</td><td>' . $row["nom"] . '</td><td>' . $row["prenom"] . '</td><td>' . $row["date_naissance"] . '</td><td>' . $row["CNE"] . '</td><td>' . $row["CIN"] . '</td><td>' . $row["genre"] . '</td><td>' . $row["ID_grp"] . '</td><td>' . $row["ID_compte"] . '</td><td><img src="/Page Web/pics/icons/Icon awesome-edit.png" alt=""></td>
@@ -119,8 +123,42 @@ if (!empty($_SESSION['idadmin'])) {
                                 }
                                 ?>
                             </table>
+
                         </div>
-                        <div class="popup hidden">
+                        <?php
+                        $query = "SELECT e.ID_etudiant , c.ID as id_compte, e.nom,e.prenom,e.date_naissance,e.CNE,e.CIN,e.genre,g.groupe_name,c.email,c.Status FROM `etudiant` as e INNER join `groupe` as g on (e.ID_grp=g.ID_groupe) INNER JOIN `compte` as c ON (e.ID_compte=c.ID)
+                            order by e.ID_etudiant";
+
+                        $temp = mysqli_query($connect, $query);
+                        // $row = $temp->fetch_assoc(); // ligne 1
+                        // var_dump($row);
+                        // $row = $temp->fetch_assoc(); // ligne 2
+                        // var_dump($row);
+                        // $row = $temp->fetch_assoc(); // ligne 2
+                        // var_dump($row);
+                        
+                        // die();
+                        while ($row = $temp->fetch_assoc()) {
+                            $id = $row['ID_etudiant'];
+                            $nom = $row['nom'];
+                            $prenom = $row['prenom'];
+                            $dateDeNaissance = $row["date_naissance"];
+                            $cNE = $row["CNE"];
+                            $cIN = $row["CIN"];
+                            $genre = $row["genre"];
+                            $Groupe = $row["groupe_name"];
+                            $email = $row["email"];
+                            $status = $row["Status"];
+                            $id_compte = $row["id_compte"];
+
+
+                            include "edit_modal.php";
+                        }
+
+
+                        ?>
+
+                        <div class="popup hidden" id="modal">
                             <div class="addEtudiant">
                                 <div class="addEtudiant-child">
                                     <span class="close">X</span>
@@ -188,11 +226,6 @@ if (!empty($_SESSION['idadmin'])) {
                 </div>
             </div>
         </div>
-
-
-
-
-
 
         </div>
         <!-- footer  -->

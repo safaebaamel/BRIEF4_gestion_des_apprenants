@@ -64,12 +64,30 @@ $(document).ready(function() {
 //dashbord script
 
 var add = document.querySelector(".add");
-var close = document.querySelector(".close");
-close.addEventListener("click", () => {
+var btns = document.querySelectorAll(".edit_etudiant");
+var closeModal = document.querySelectorAll(".close");
 
-    close.parentElement.parentElement.parentElement.classList.toggle("hidden");
-})
+const onModalClosed = (event) => {
+    console.log("CLOSE MODAL");
+    event.target.parentElement.parentElement.parentElement.classList.toggle("hidden");
+}
+
 add.addEventListener("click", () => {
-
-    close.parentElement.parentElement.parentElement.classList.toggle("hidden");
+    document.querySelector("#modal").classList.toggle("hidden");
 })
+
+
+const onBtnClicked = (event) => {
+    console.log("yaw yaw yaw", event.target.parentElement)
+    const id = event.target.parentElement.getAttribute('data-id');
+    console.log("ID : ", id);
+    const modal = document.querySelector(`#modal-${id}`)
+    console.log("modal ", modal);
+    if (!modal) return;
+    console.log(modal.classList)
+    modal.classList.toggle('hidden');
+}
+
+
+btns.forEach(btn => btn.addEventListener("click", onBtnClicked));
+closeModal.forEach(btn => btn.addEventListener("click", onModalClosed));

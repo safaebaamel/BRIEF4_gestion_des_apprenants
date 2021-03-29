@@ -1,27 +1,31 @@
 <?php
 include('../../connexion.php');
-if (isset($_GET['id'])) {
-    $id = $_GET["id"];
-}
-if (isset($id)) {
-    $query = "SELECT * FROM etudiant WHERE ID_etudiant='$id'";
-    $result = mysqli_query($connect, $query);
-    while ($row = $result->fetch_assoc()) {
-        $nom = $row['nom'];
-        $prenom = $row['prenom'];
-        $dateNaissance = $row['date_naissance'];
-        $cne = $row['cne'];
-        $cin = $row['cin'];
-        $genre = $row['genre'];
-        $groupe = $row['groupe'];
-        $email = $row['email'];
-        $password = $row['password'];
-    }
-}
+
+
+// if (isset($_GET["id"])) {
+    
+//     $id = $_POST["id"];
+//     $query = "SELECT * FROM etudiant WHERE ID_etudiant='$id'";
+//     $result = mysqli_query($connect, $query);
+//     while ($row = $result->fetch_assoc()) {
+//         $id = $row['ID_etudiant'];
+//         $nom = $row['nom'];
+//         $prenom = $row['prenom'];
+//         $dateNaissance = $row['date_naissance'];
+//         $cne = $row['CNE'];
+//         $cin = $row['CIN'];
+//         $genre = $row['genre'];
+//         $groupe = $row['ID_grp'];
+//         $email = $row['ID_compte'];
+//         // $password = $row['password'];
+//         echo $id.' '.$nom.' '.$prenom.' '.$dateNaissance.' '.$cne.' '.$cin.' '.$genre.' '.$groupe.' '.$email;
+//     }
+// }
 
 
 
 if (isset($_POST["update"])) {
+    $id = $_POST["id"];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $dateNaissance = $_POST['date_naissance'];
@@ -30,11 +34,17 @@ if (isset($_POST["update"])) {
     $genre = $_POST['genre'];
     $groupe = $_POST['groupe'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $id_compte = $_POST['id_compte'];
+    
+    
 
-    $query = "UPDATE `etudiant` SET `nom`='$nom',`prenom`='$prenom',`date_naissance`='$dateNaissance',`CNE`='$cne',`CIN`='$cin',`genre`='$genre',`ID_grp`='$groupe',`ID_compte`='$id_compte' WHERE `etudiant`='$id'";
+    echo $nom.' '.$prenom.' '.$dateNaissance.' '.$cne.' '.$cin.' '.$genre.' '.$groupe.' '.$email;
 
-    $query2 = "UPDATE `compte` SET `email`='$email',`passwd`='$password' WHERE `ID`='$id'";
+    $query = "UPDATE `etudiant` SET `nom`='$nom',`prenom`='$prenom',`date_naissance`='$dateNaissance',`CNE`='$cne',`CIN`='$cin',`genre`='$genre',`ID_grp`='$groupe' WHERE `ID_etudiant`='$id'";
 
-    //    header("location:../administrateur-etudiant.php");
+    $query2 = "UPDATE `compte` SET `email`='$email' WHERE `ID`='$id_compte'";
+    mysqli_query($connect, $query2);
+    mysqli_query($connect, $query);
+
+       header("location:../administrateur-etudiant.php");
 }

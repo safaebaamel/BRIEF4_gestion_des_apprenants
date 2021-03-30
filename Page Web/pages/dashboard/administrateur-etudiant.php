@@ -22,7 +22,6 @@ if (!empty($_SESSION['idadmin'])) {
         <link rel="stylesheet" href="../../css/index.css">
         <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
 
     <body>
@@ -166,12 +165,13 @@ if (!empty($_SESSION['idadmin'])) {
                                         <h2 class="title">
                                             Ajouter un etudiant
                                         </h2>
+                                        <div id="error" style="color: #red; text-align: center; margin-bottom:10px;"></div>
                                         <div class="inputs">
-                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
+                                            <input type="text" onkeyup="requiredFieldName()" class="input_style" id="nom" name="nom" placeholder="Entrer le nom">
                                             <label for="nom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" pattern="[a-z]{3,}" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
+                                            <input type="text" onkeyup="requiredFieldlName()" class="input_style" id="prenom" name="prenom" placeholder="Entrer le prénom">
                                             <label for="prenom" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -179,11 +179,11 @@ if (!empty($_SESSION['idadmin'])) {
                                             <label for="date_naissance" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
+                                            <input type="text" pattern="[a-z0-9]{4,}" class="input_style" id="cne" name="cne" placeholder="Entrer CNE">
                                             <label for="cne" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" pattern="[0-9]{4,}" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
+                                            <input type="text" pattern="[a-z0-9]{4,}" class="input_style" id="cin" name="cin" placeholder="Entrer cin">
                                             <label for="cin" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
@@ -227,8 +227,8 @@ if (!empty($_SESSION['idadmin'])) {
                 </div>
             </div>
         </div>
-
-        </div>
+    </div>
+    <script src="../../scripts/script.js"></script>
         <!-- footer  -->
         <footer>
             <div class="footer ">

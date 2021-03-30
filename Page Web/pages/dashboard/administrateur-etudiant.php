@@ -49,7 +49,7 @@ if (!empty($_SESSION['idadmin'])) {
             <div class="sidebar">
                 <a class="menu" href="administrateur-home.php">home</a>
                 <a class="menu" href="administrateur-groupes.php">Gestion des groupes</a>
-                <a class="menu" href="#">Gestion des comptes</a>
+                <a class="menu" href="administrateur-comptes.php">Gestion des comptes</a>
                 <a class="menu" href="administrateur-etudiant.php">Gestion des Etudiants</a>
             </div>
             <div class="right_centent">

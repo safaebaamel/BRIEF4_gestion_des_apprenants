@@ -66,24 +66,27 @@ if (!empty($_SESSION['idadmin'])) {
                             <table>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Nom</td>
-                                    <th>professeur</td>
+                                    <th>role</td>
+                                    <th>email</td>
+                                    <th>password</td>
+                                    <th>Status</td>
                                     <th class="operation modaledit">Mod</th>
                                     <th class="operation modalsu">Sup</th>
                                 </tr>
                                 <?php
 
-                                $query = "SELECT * FROM `groupe`";
+                                $query = "SELECT * FROM `compte`";
 
                                 $result = mysqli_query($connect, $query);
                                 while ($row = $result->fetch_assoc()) {
-                                    $id = $row['ID_groupe'];
-                                    $nom = $row['groupe_name'];
-                                    $professeur = $row['professeur'];
-
+                                    $id = $row['ID'];
+                                    $role = $row['role'];
+                                    $email = $row['email'];
+                                    $password = $row['passwd'];
+                                    $status = $row['Status'];
                                     echo '<tr>
-                                    <td>' . $id . '</td><td>' . $nom . '</td><td>' . $professeur . '</td><td><a class="edit_element" href="administrateur-groupes.php?update_id=' . $id . '"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
-                                <td><a href="service/deletegroupe.php?del_id=' . $id . '"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td>
+                                    <td>' . $id . '</td><td>' . $role . '</td><td>' . $email . '</td><td>' . $password . '</td><td>' . $status . '</td><td><a class="edit_element" href="administrateur-comptes.php?update_id=' . $id . '"><img src="../../pics/icons/Icon awesome-edit.png" alt=""></a></td>
+                                <td><a href="service/deleteCompte.php?del_id=' . $id . '"><img src="../../pics/icons/Icon material-delete.png" alt=""></a></td>
                                 </tr>';
                                     // echo '<tr><td>' . $row["ID_etudiant"] . '</td><td>' . $row["nom"] . '</td><td>' . $row["prenom"] . '</td><td>' . $row["date_naissance"] . '</td><td>' . $row["CNE"] . '</td><td>' . $row["CIN"] . '</td><td>' . $row["genre"] . '</td><td>' . $row["ID_grp"] . '</td><td>' . $row["ID_compte"] . '</td><td><img src="/Page Web/pics/icons/Icon awesome-edit.png" alt=""></td>
                                     // <td><img src="/Page Web/pics/icons/Icon material-delete.png" alt=""></td></tr>';
@@ -94,9 +97,9 @@ if (!empty($_SESSION['idadmin'])) {
                         </div>
                         <?php
                         if (isset($_GET['update_id'])) {
-                            $idGroupe = $_GET['update_id'];
+                            $id = $_GET['update_id'];
                             // echo $idGroupe;
-                            $query = "SELECT * FROM `groupe` where `ID_groupe` = '$idGroupe'";
+                            $query = "SELECT * FROM `compte` where `ID` = '$id'";
                             $result = mysqli_query($connect, $query);
                             $row = $result->fetch_assoc();
                             // echo $row['groupe_name'];
@@ -110,18 +113,26 @@ if (!empty($_SESSION['idadmin'])) {
                             <div class="addEtudiant">
                                 <div class="addEtudiant-child">
                                     <span class="close">X</span>
-                                    <form action="service/updateGroupe.php" method="POST" id="form">
+                                    <form action="service/updateCompte.php" method="POST" id="form">
                                         <h2 class="title">
-                                            update un groupe
+                                            update un compte
                                         </h2>
-                                        <input type="text" hidden name="idGroupe" value="<?php echo $row['ID_groupe'] ?>">
+                                        <input type="text" hidden name="id" value="<?php echo $row['ID'] ?>">
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="nom" name="groupeName" value="<?php echo $row['groupe_name'] ?>" placeholder="Entrer le nom de groupe">
-                                            <label for="nom" class="controler">champ obligatoire</label>
+                                            <input type="text" class="input_style" id="role" name="role" value="<?php echo $row['role'] ?>" placeholder="Entrer le nom de role">
+                                            <label for="role" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="professeur" name="professeur" value="<?php echo $row['professeur'] ?>" placeholder="Entrer le nom de professeur">
-                                            <label for="professeur" class="controler">champ obligatoire</label>
+                                            <input type="email" class="input_style" id="email" name="email" value="<?php echo $row['email'] ?>" placeholder="Entrer le email">
+                                            <label for="email" class="controler">champ obligatoire</label>
+                                        </div>
+                                        <div class="inputs">
+                                            <input type="password" class="input_style" id="password" name="password" value="<?php echo $row['passwd'] ?>" placeholder="Entrer le password">
+                                            <label for="password" class="controler">champ obligatoire</label>
+                                        </div>
+                                        <div class="inputs">
+                                            <input type="text" class="input_style" id="Status" name="Status" value="<?php echo $row['Status'] ?>" placeholder="Entrer le Status">
+                                            <label for="Status" class="controler">champ obligatoire</label>
                                         </div>
                                         <input type="submit" class="btn modalsubmit" value="modifier" name="update">
                                         <div class="error"></div>

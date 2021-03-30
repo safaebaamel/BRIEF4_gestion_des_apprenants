@@ -32,7 +32,7 @@ if(isset($_POST['submit'])) {
     <title>Se connecter</title>
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="/Page Web/scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 
     <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,22 +60,22 @@ if(isset($_POST['submit'])) {
     <div class="login">
         <h1 class="big-title" style="padding-top: 100px;">Sign in to your</h1>
         <h2 class="sous-title">Justinmind Account</h2>
-        <span class="error" style="color:red; text-align: center;"><?php echo  $_SESSION['err']; ?></span>
+        <span class="error" id="error" style="color:red; text-align: center;"><?php echo  $_SESSION['err']; ?></span>
         <br>
         <form method="POST" class="form-login shadow" action="Se_connecter.php">
             <label for="#email" class="label-name">your email</label>
             <div class="email">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input name="email" pattern="^([a-zA-Z\d\.]+)@([a-z\d-]+)\.([a-z]{2,8})$" class="input" type="email" placeholder="e.g.jack@scholariz.com" id="email" required>
+                <input name="email" onkeyup="requiredFieldemail()" class="input" placeholder="e.g.jack@scholariz.com" id="email" required>
             </div>
             <label for="#password" class="label-name">your password</label>
             <div class="password">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input class="input" type="password" name="password" placeholder="your password here" id="password" required>
+                <input class="input" onkeyup="requiredFieldpasswd()" type="password" name="password" placeholder="your password here" id="password" required>
             </div>
 
             <!-- <a href="#">Forget password ?</a> -->
-            <button onclick="" type="submit" name="submit" class="button">Sign in</a></button>
+            <button type="submit" name="submit" class="button">Sign in</a></button>
         </form>
 
     </div>

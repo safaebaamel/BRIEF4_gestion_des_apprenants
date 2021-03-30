@@ -8,7 +8,7 @@
     <title>Contacter Nous</title>
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="/Page Web/scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
     <link rel="stylesheet" href="/Page Web/css/contacts.css">
     <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -76,12 +76,13 @@
                 <div class="contactForm">
                     <form action="" id="form" method="GET">
                         <h2>Send Message</h2>
+                        <div id="error" style="color: red; margin-top: 5px; text-align: left;"></div>
                         <div class="inputBox">
-                            <input id="name" type="text" pattern="[a-zA-Z]{3,}" name="name" required="required">
+                            <input id="nom" type="text" onkeyup="requiredFieldName()" required="required">
                             <span>Full Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="email" pattern="^([a-zA-Z\d\.]+)@([a-z\d-]+)\.([a-z]{2,8})$" id="email"
+                            <input type="email" onkeyup="requiredFieldemail()" id="email"
                                 name="email" required="required">
                             <span>Email</span>
                         </div>
@@ -90,10 +91,9 @@
                             <span>Your Message...</span>
                         </div>
                         <div class="inputBox">
-                            <input type="submit" id="myBtn" value="Send" onclick="">
+                            <input type="submit" id="myBtn" value="Send">
                         </div>
                     </form>
-                    <div id="error"></div>
                 </div>
             </div>
         </section>

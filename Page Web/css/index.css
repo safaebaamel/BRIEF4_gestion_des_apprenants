@@ -213,6 +213,20 @@ nav ul li.btn.hide i:before {
   margin: 0 auto;
 }
 
+@media (min-width: 600px) {
+  .page-content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .page-content {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card {
   position: relative;
   display: -webkit-box;

@@ -34,9 +34,6 @@
             <ul>
                 <li class="logo">Schol<span>ariz</span></li>
                 <li class="nav_links"><a href="../../../index.html">Accueil</a></li>
-                <!-- <li class="nav_links"><a href="../Notre_Ecole.html">Notre Ecole</a></li> -->
-                <!-- <li class="nav_links"><a href="../Contactez_Nous.html">Contactez Nous</a></li> -->
-                <!-- <li class="nav_links li_btn"><a href="../Se_connecter.php">Se connecter</a></li> -->
                 <li class="btn"><a href="#"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
@@ -46,14 +43,6 @@
     <!-- end main -->
 
     <div class="container">
-        <!-- <div class="sidbar-top">
-            <p>Administrateur</p>
-            <a href="#">Déconnexion</a>
-        </div>
-        <div class="sidbar-left">
-
-        </div>
-        <div class="main"></div> -->
 
         <div class="sidebar">
             <a class="menu" href="administrateur-home.php">home</a>
@@ -104,10 +93,10 @@
                 </div>
                 <div class="statistic">
                     <div class="chart-bar">
-                        <img src="../../pics/statistic/1.png" alt="chart graphic">
+                        <img src="../../pics/statistic/1.png" alt="chart graphic" class="imgi">
                     </div>
                     <div class="line-bar">
-                        <img src="../../pics/statistic/2.png" alt="line bar">
+                        <img src="../../pics/statistic/2.png" alt="line bar" class="imgi">
                     </div>
                 </div>
             </div>

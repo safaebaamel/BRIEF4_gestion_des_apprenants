@@ -11,13 +11,13 @@ $bp-lg: 800px;
   padding: 1rem;
   max-width: 1000px;
   margin: 0 auto;  
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media (min-width: $bp-md) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
   
-  @media (min-width: $bp-lg) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  // @media (min-width: $bp-lg) {
+  //   grid-template-columns: repeat(4, 1fr);
+  // }
 }
 
 

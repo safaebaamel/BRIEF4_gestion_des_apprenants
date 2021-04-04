@@ -20,6 +20,7 @@ if (!empty($_SESSION['idadmin'])) {
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <title>gestion des groupes</title>
         <link rel="stylesheet" href="../../css/index.css">
+
         <link rel="icon" href="../images/icons/baby-car.png" type="image/icon type">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -140,16 +141,16 @@ if (!empty($_SESSION['idadmin'])) {
                                         <h2 class="title">
                                             Ajouter un groupe
                                         </h2>
+                                        <div id="error" style="color: red; text-align: center; margin-bottom:10px;"></div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="nom" name="groupeName" placeholder="Entrer le nom de groupe">
-                                            <label for="nom" class="controler">champ obligatoire</label>
+                                            <input type="text" onkeyup="requiredFieldlName()" class="input_style" id="prenom" name="groupeName" placeholder="Entrer le nom de groupe">
+                                            <label for="nom" class="controler"></label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="professeur" name="professeur" placeholder="Entrer le nom de professeur">
-                                            <label for="professeur" class="controler">champ obligatoire</label>
+                                            <input type="text" onkeyup="requiredFieldlProf()" class="input_style" id="professeur" name="professeur" placeholder="Entrer le nom de professeur">
+                                            <label for="professeur" class="controler"></label>
                                         </div>
                                         <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">
-                                        <div class="error"></div>
                                     </form>
                                 </div>
                             </div>

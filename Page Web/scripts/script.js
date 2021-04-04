@@ -38,7 +38,7 @@ btns.forEach(btn => btn.addEventListener("click", onBtnClicked));
 closeModal.forEach(btn => btn.addEventListener("click", onModalClosed));
 
 
-//
+// REGEX PART
 
 function requiredFieldemail() {
     var email = document.getElementById('email').value; 
@@ -90,10 +90,10 @@ function requiredFieldName() {
 
 function requiredFieldlName() {
     var name = document.getElementById('prenom').value;
-    var namepattern = /^[a-zA-Z]{3,}/;
+    var namepattern = /^\[a-zA-Z] \[a-zA-Z]$/g;
 
     if (name.length === 0) {
-        document.getElementById('error').innerHTML = "Prenom Field empty";
+        document.getElementById('error').innerHTML = "Field empty";
     }
     else if (!name.match(namepattern)) {
         document.getElementById('error').innerHTML = "The name should match the appropriat format";
@@ -103,3 +103,20 @@ function requiredFieldlName() {
         return true;
     }
 }
+
+function requiredFieldlProf() {
+    var name = document.getElementById('professeur').value;
+    var namepattern = /^\[a-zA-Z] \[a-zA-Z]$/g;
+
+    if (name.length === 0) {
+        document.getElementById('error').innerHTML = "Field empty";
+    }
+    else if (!name.match(namepattern)) {
+        document.getElementById('error').innerHTML = "The name should match the appropriat format";
+        return false;
+    } else {
+        document.getElementById('error').innerHTML = "";
+        return true;
+    }
+}
+

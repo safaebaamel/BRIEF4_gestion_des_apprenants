@@ -213,20 +213,6 @@ nav ul li.btn.hide i:before {
   margin: 0 auto;
 }
 
-@media (min-width: 600px) {
-  .page-content {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 800px) {
-  .page-content {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .card {
   position: relative;
   display: -webkit-box;
@@ -534,10 +520,11 @@ nav ul li.btn.hide i:before {
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span {
-  color: #e91e63;
-  font-size: 12px;
+  color: darkblue;
+  font-size: 30px;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+  background-color: #00bcd4;
 }
 
 .contactForm .inputBox input[type="submit"] {
@@ -604,8 +591,7 @@ nav ul li.btn.hide i:before {
 .picture .intro {
   position: relative;
   font-size: 35px;
-  color: black;
-  text-shadow: 10px 10px #46b7e073;
+  color: white;
   text-align: center;
   margin: auto;
   width: 70%;
@@ -1099,6 +1085,16 @@ nav ul li.btn.hide i:before {
   text-decoration: none;
   display: inline-block;
   color: #FFF;
+}
+
+.imgi {
+  display: block;
+}
+
+@media all and (max-width: 1340px) {
+  .imgi {
+    display: none;
+  }
 }
 
 .right_centent {

@@ -34,12 +34,10 @@
     .picture .intro {
         position: relative;
         font-size: 35px;
-        color: black;
-        text-shadow: 10px 10px #46b7e073;
+        color: white;
         text-align: center;
         margin: auto;
         width: 70%;
-        // padding: 10px;
         word-spacing: 16px;
         margin-left: auto;
         margin-right: auto;
@@ -457,6 +455,15 @@
             text-decoration: none;
             display: inline-block;
             color: #FFF;
+        }
+    }
+
+    .imgi {
+        display: block;
+    } 
+    @media all and (max-width:1340px) {
+        .imgi {
+            display: none;
         }
     }
     

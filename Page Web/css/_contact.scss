@@ -117,10 +117,8 @@
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span{
-  color: darkblue;
-  font-size: 30px;
+  font-size: 12px;
   transform: translateY(-10px);
-  background-color: #00bcd4;
 }
 
 .contactForm .inputBox input[type="submit"] {

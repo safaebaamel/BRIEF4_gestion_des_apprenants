@@ -88,14 +88,14 @@ function requiredFieldName() {
     }
 }
 
-function requiredFieldlName() {
-    var name = document.getElementById('prenom').value;
-    var namepattern = /^\[a-zA-Z] \[a-zA-Z]$/g;
+function requiredFieldGroup() {
+    var grpname = document.getElementById('name').value;
+    var namepattern = /^[a-zA-Z]{3,}/;
 
-    if (name.length === 0) {
+    if (grpname.length === 0) {
         document.getElementById('error').innerHTML = "Field empty";
     }
-    else if (!name.match(namepattern)) {
+    else if (!grpname.match(namepattern)) {
         document.getElementById('error').innerHTML = "The name should match the appropriat format";
         return false;
     } else {
@@ -105,8 +105,8 @@ function requiredFieldlName() {
 }
 
 function requiredFieldlProf() {
-    var name = document.getElementById('professeur').value;
-    var namepattern = /^\[a-zA-Z] \[a-zA-Z]$/g;
+    var name = document.getElementById('prof').value;
+    var namepattern =/^[a-zA-Z]{3,}/;
 
     if (name.length === 0) {
         document.getElementById('error').innerHTML = "Field empty";

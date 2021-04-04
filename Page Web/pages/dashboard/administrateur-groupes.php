@@ -143,11 +143,11 @@ if (!empty($_SESSION['idadmin'])) {
                                         </h2>
                                         <div id="error" style="color: red; text-align: center; margin-bottom:10px;"></div>
                                         <div class="inputs">
-                                            <input type="text" onkeyup="requiredFieldlName()" class="input_style" id="prenom" name="groupeName" placeholder="Entrer le nom de groupe">
+                                            <input type="text" onkeyup="requiredFieldGroup()" class="input_style" id="name" name="groupeName" placeholder="Entrer le nom de groupe">
                                             <label for="nom" class="controler"></label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" onkeyup="requiredFieldlProf()" class="input_style" id="professeur" name="professeur" placeholder="Entrer le nom de professeur">
+                                            <input type="text" onkeyup="requiredFieldlProf()" class="input_style" id="prof" name="professeur" placeholder="Entrer le nom de professeur">
                                             <label for="professeur" class="controler"></label>
                                         </div>
                                         <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">

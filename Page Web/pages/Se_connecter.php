@@ -5,7 +5,6 @@ $_SESSION['err']='';
 if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $query = "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' ";
     $test = mysqli_query($connect, "SELECT * FROM compte WHERE email='$email' AND passwd = '$password' AND role= 1");
     $row= mysqli_fetch_array($test);
     
@@ -14,7 +13,7 @@ if(isset($_POST['submit'])) {
         $_SESSION['idadmin'] = $row['role'];
         header("Location:  dashboard/administrateur-home.php");
     } else {
-        $_SESSION['err'] = "password incorrect";
+        $_SESSION['err'] = "password or email incorrect";
     }
 }
 

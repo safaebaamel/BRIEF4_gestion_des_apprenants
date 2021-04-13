@@ -44,7 +44,6 @@
         padding-top: 170px;
         button {
             background-color: #000;
-            /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
@@ -61,7 +60,6 @@
     .shadow {
         .button {
             background-color: #46B6E0;
-            /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
@@ -463,6 +461,12 @@
     } 
     @media all and (max-width:1340px) {
         .imgi {
+            width: 290px;
+        }
+        .right_centent .centnet .circle .circle-info .count {
+            display: none;
+        }
+        .right_centent .centnet .circle .circle-info .nom {
             display: none;
         }
     }

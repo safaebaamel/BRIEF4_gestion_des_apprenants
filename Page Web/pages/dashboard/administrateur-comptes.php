@@ -165,26 +165,6 @@ if (!empty($_SESSION['idadmin'])) {
                                 </div>
                             </div>
                         </div>
-
-                        <!-- delete -->
-                        <!-- <div class="popup" id="modal-confirmation">
-                            <div class="deleteEtudiant">
-                                <div class="deleteChild">
-                                    <span class="close">X</span>
-                                    <form action="service/deleteGroupe.php" method="POST" id="form">
-                                        <h2 class="title">
-                                            Voulez-vous vraiment supprimer ce groupe?
-                                        </h2>
-                                        <div class="confirmation">
-                                            <input type="submit" class="btn modalsubmit" value="oui" name="oui">
-                                            <input type="submit" class="btn modalsubmit" value="oui" name="oui">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> -->
-
-
                     </div>
                 </div>
             </div>

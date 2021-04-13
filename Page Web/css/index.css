@@ -263,10 +263,6 @@ nav ul li.btn.hide i:before {
   height: 110%;
   background-size: cover;
   background-position: 0 0;
-  -webkit-transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
-  transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
-  transition: transform calc(var(--d) * 1.5) var(--e);
-  transition: transform calc(var(--d) * 1.5) var(--e), -webkit-transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
 }
 
@@ -297,10 +293,6 @@ nav ul li.btn.hide i:before {
           align-items: center;
   width: 100%;
   padding: 1rem;
-  -webkit-transition: -webkit-transform var(--d) var(--e);
-  transition: -webkit-transform var(--d) var(--e);
-  transition: transform var(--d) var(--e);
-  transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
   z-index: 1;
 }
 
@@ -334,7 +326,7 @@ nav ul li.btn.hide i:before {
 }
 
 .btn:focus {
-  outline: 1px dashed yellow;
+  outline: 1px dashed white;
   outline-offset: 3px;
 }
 
@@ -369,8 +361,6 @@ nav ul li.btn.hide i:before {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    -webkit-transition-delay: calc(var(--d) / 8);
-            transition-delay: calc(var(--d) / 8);
   }
 }
 
@@ -615,7 +605,6 @@ nav ul li.btn.hide i:before {
 
 .picture .intro button {
   background-color: #000;
-  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -631,7 +620,6 @@ nav ul li.btn.hide i:before {
 
 .shadow .button {
   background-color: #46B6E0;
-  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -1105,6 +1093,12 @@ nav ul li.btn.hide i:before {
 
 @media all and (max-width: 1340px) {
   .imgi {
+    width: 290px;
+  }
+  .right_centent .centnet .circle .circle-info .count {
+    display: none;
+  }
+  .right_centent .centnet .circle .circle-info .nom {
     display: none;
   }
 }

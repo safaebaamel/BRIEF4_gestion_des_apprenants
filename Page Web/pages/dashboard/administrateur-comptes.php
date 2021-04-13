@@ -98,11 +98,11 @@ if (!empty($_SESSION['idadmin'])) {
                         <?php
                         if (isset($_GET['update_id'])) {
                             $id = $_GET['update_id'];
-                            // echo $idGroupe;
+                            // echo $id;
                             $query = "SELECT * FROM `compte` where `ID` = '$id'";
                             $result = mysqli_query($connect, $query);
                             $row = $result->fetch_assoc();
-                            // echo $row['groupe_name'];
+                            // echo $row['role'];
                         }
 
                         ?>
@@ -149,15 +149,23 @@ if (!empty($_SESSION['idadmin'])) {
                                     <span class="close">X</span>
                                     <form action="service/createGroupe.php" method="POST" id="form">
                                         <h2 class="title">
-                                            Ajouter un groupe
+                                            Ajouter un compte
                                         </h2>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="nom" name="groupeName" placeholder="Entrer le nom de groupe">
-                                            <label for="nom" class="controler">champ obligatoire</label>
+                                            <input type="text" class="input_style" id="role" name="role" placeholder="Entrer le nom de role">
+                                            <label for="role" class="controler">champ obligatoire</label>
                                         </div>
                                         <div class="inputs">
-                                            <input type="text" class="input_style" id="professeur" name="professeur" placeholder="Entrer le nom de professeur">
-                                            <label for="professeur" class="controler">champ obligatoire</label>
+                                            <input type="text" class="input_style" id="email" name="email" placeholder="Entrer email">
+                                            <label for="email" class="controler">champ obligatoire</label>
+                                        </div>
+                                        <div class="inputs">
+                                            <input type="text" class="input_style" id="passwd" name="passwd" placeholder="Entrer password">
+                                            <label for="passwd" class="controler">champ obligatoire</label>
+                                        </div>
+                                        <div class="inputs">
+                                            <input type="text" class="input_style" id="Status" name="Status" placeholder="Entrer Status">
+                                            <label for="Status" class="controler">champ obligatoire</label>
                                         </div>
                                         <input type="submit" class="btn modalsubmit" value="Ajouter" name="Ajouter">
                                         <div class="error"></div>
